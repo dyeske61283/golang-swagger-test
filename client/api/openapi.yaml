@@ -1,0 +1,38 @@
+openapi: 3.0.1
+info:
+  contact: {}
+  description: This is a sample API.
+  title: Ping API
+  version: "1.0"
+servers:
+- url: /
+paths:
+  /ping:
+    get:
+      description: do ping
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/main.ReturnModel'
+          description: ok
+      summary: ping example
+      tags:
+      - example
+components:
+  schemas:
+    main.ReturnModel:
+      example:
+        name: name
+        property: 0
+        id: id
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        property:
+          type: integer
+      type: object
+x-original-swagger-version: "2.0"

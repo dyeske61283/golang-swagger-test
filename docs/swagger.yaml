@@ -10,6 +10,9 @@ definitions:
     type: object
 info:
   contact: {}
+  description: This is a sample API.
+  title: Ping API
+  version: "1.0"
 paths:
   /ping:
     get:
